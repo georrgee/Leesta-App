@@ -13,6 +13,8 @@
 		36FE47872229F9A40074582D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36FE47852229F9A40074582D /* LaunchScreen.storyboard */; };
 		36FE47922229FAD90074582D /* ListsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FE47912229FAD90074582D /* ListsTableViewController.swift */; };
 		36FE47942229FBE40074582D /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FE47932229FBE40074582D /* ListTableViewCell.swift */; };
+		36FE4796222A05C90074582D /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FE4795222A05C90074582D /* List.swift */; };
+		36FE4798222A1CC60074582D /* ItemDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FE4797222A1CC60074582D /* ItemDetailsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		36FE47882229F9A40074582D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36FE47912229FAD90074582D /* ListsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsTableViewController.swift; sourceTree = "<group>"; };
 		36FE47932229FBE40074582D /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		36FE4795222A05C90074582D /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		36FE4797222A1CC60074582D /* ItemDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +63,7 @@
 				36FE47902229FAB80074582D /* Model */,
 				36FE478F2229FAB00074582D /* View */,
 				36FE478E2229FAA80074582D /* Controller */,
-				36FE477C2229F9A40074582D /* AppDelegate.swift */,
-				36FE47802229F9A40074582D /* Main.storyboard */,
 				36FE47832229F9A40074582D /* Assets.xcassets */,
-				36FE47852229F9A40074582D /* LaunchScreen.storyboard */,
 				36FE47882229F9A40074582D /* Info.plist */,
 			);
 			path = Leesta;
@@ -71,7 +72,9 @@
 		36FE478E2229FAA80074582D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				36FE477C2229F9A40074582D /* AppDelegate.swift */,
 				36FE47912229FAD90074582D /* ListsTableViewController.swift */,
+				36FE4797222A1CC60074582D /* ItemDetailsTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -79,6 +82,8 @@
 		36FE478F2229FAB00074582D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				36FE47802229F9A40074582D /* Main.storyboard */,
+				36FE47852229F9A40074582D /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -87,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				36FE47932229FBE40074582D /* ListTableViewCell.swift */,
+				36FE4795222A05C90074582D /* List.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,6 +169,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				36FE477D2229F9A40074582D /* AppDelegate.swift in Sources */,
+				36FE4798222A1CC60074582D /* ItemDetailsTableViewController.swift in Sources */,
+				36FE4796222A05C90074582D /* List.swift in Sources */,
 				36FE47922229FAD90074582D /* ListsTableViewController.swift in Sources */,
 				36FE47942229FBE40074582D /* ListTableViewCell.swift in Sources */,
 			);

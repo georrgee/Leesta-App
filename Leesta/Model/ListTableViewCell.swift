@@ -9,6 +9,10 @@
 import UIKit
 
 class ListTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var checkMarkLabel: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
