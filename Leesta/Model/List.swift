@@ -6,7 +6,7 @@
 
 import Foundation
 
-class List: NSObject, NSCoding {
+class List: NSObject, NSCoding { // AKA CheckListItem
    
     var text      = ""
     var isChecked = false
