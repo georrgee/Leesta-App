@@ -25,9 +25,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="307" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUw-ob-8H5">
-                                            <rect key="frame" x="34" y="12" width="273" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUw-ob-8H5">
+                                            <rect key="frame" x="30" y="10" width="277" height="23.5"/>
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -40,6 +39,11 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="SUw-ob-8H5" firstAttribute="centerY" secondItem="N8u-qn-tFC" secondAttribute="centerY" id="8bL-Ge-VVr"/>
+                                        <constraint firstAttribute="trailing" secondItem="SUw-ob-8H5" secondAttribute="trailing" id="LJ2-tB-tdp"/>
+                                        <constraint firstItem="SUw-ob-8H5" firstAttribute="leading" secondItem="N8u-qn-tFC" secondAttribute="leading" constant="30" id="iHl-4t-Z3y"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="checkMarkLabel" destination="O5K-0B-X21" id="0n5-pE-X5I"/>
@@ -63,7 +67,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z4X-CQ-Xa2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1033" y="178"/>
+            <point key="canvasLocation" x="1032.8" y="177.66116941529236"/>
         </scene>
         <!--Add Item-->
         <scene sceneID="1bD-Ra-7sO">
@@ -83,9 +87,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="i.e. &quot;Take out the trash&quot;" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eNj-Xw-1Lg">
-                                                    <rect key="frame" x="16" y="6" width="343" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="i.e. &quot;Take out the trash&quot;" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eNj-Xw-1Lg">
+                                                    <rect key="frame" x="16" y="10" width="343" height="26"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -95,6 +98,12 @@
                                                     </connections>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eNj-Xw-1Lg" firstAttribute="leading" secondItem="Gpd-ID-5uD" secondAttribute="leading" constant="16" id="A4i-G9-Nbx"/>
+                                                <constraint firstAttribute="trailing" secondItem="eNj-Xw-1Lg" secondAttribute="trailing" constant="16" id="aB0-dY-c05"/>
+                                                <constraint firstItem="eNj-Xw-1Lg" firstAttribute="top" secondItem="Gpd-ID-5uD" secondAttribute="top" constant="10" id="at3-QF-XIS"/>
+                                                <constraint firstAttribute="bottom" secondItem="eNj-Xw-1Lg" secondAttribute="bottom" constant="7.5" id="iJu-pk-TIm"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -214,9 +223,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of List" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tev-NI-WPF" userLabel="Textfield">
-                                                    <rect key="frame" x="16" y="6" width="343" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of List" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tev-NI-WPF" userLabel="Textfield">
+                                                    <rect key="frame" x="15" y="10" width="350" height="23.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -226,6 +234,12 @@
                                                     </connections>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Tev-NI-WPF" secondAttribute="trailing" constant="10" id="3kN-Yz-cqk"/>
+                                                <constraint firstAttribute="bottom" secondItem="Tev-NI-WPF" secondAttribute="bottom" constant="10" id="56C-Ud-HIq"/>
+                                                <constraint firstItem="Tev-NI-WPF" firstAttribute="leading" secondItem="8q8-E5-Uqc" secondAttribute="leading" constant="15" id="Gnb-8s-Ohh"/>
+                                                <constraint firstItem="Tev-NI-WPF" firstAttribute="top" secondItem="8q8-E5-Uqc" secondAttribute="top" constant="10" id="XpW-aa-8jB"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -246,11 +260,18 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Psg-g7-qRX">
-                                                    <rect key="frame" x="297" y="4" width="36" height="36"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Psg-g7-qRX">
+                                                    <rect key="frame" x="305" y="4" width="36" height="36"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="36" id="LXi-Ae-tGb"/>
+                                                        <constraint firstAttribute="height" constant="36" id="MwX-oU-yy5"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Psg-g7-qRX" secondAttribute="trailing" id="sy8-7F-717"/>
+                                                <constraint firstItem="Psg-g7-qRX" firstAttribute="top" secondItem="DMI-jx-uPt" secondAttribute="top" constant="4" id="zTv-RY-fWm"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="Y2o-uL-UGg" kind="show" identifier="pickIcon" id="7GT-ve-OSc"/>
