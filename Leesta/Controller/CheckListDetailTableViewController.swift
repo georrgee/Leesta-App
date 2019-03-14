@@ -14,10 +14,15 @@ protocol CheckListDetailViewControllerDelegate: class {
     func checklistDetailViewController(_ controller: CheckListDetailTableViewController, didFinishEditing checklist: Checklist)
 }
 
-class CheckListDetailTableViewController: UITableViewController, UITextFieldDelegate{
-    
+class CheckListDetailTableViewController: UITableViewController, UITextFieldDelegate, IconPickerDelegate {
+   
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var doneBarButton: UIBarButtonItem!
+    @IBOutlet weak var iconImageView: UIImageView!
+    
+    var iconName = "Folder"
+    weak var delegate:   CheckListDetailViewControllerDelegate?
+    var checklistToEdit: Checklist?
     
     @IBAction func cancelButtonTapped() {
         delegate?.checklistDetailViewControllerDidCancel(self)
@@ -26,15 +31,13 @@ class CheckListDetailTableViewController: UITableViewController, UITextFieldDele
     @IBAction func doneButtonTapped(){
         if let checklist = checklistToEdit {
             checklist.name = textField.text!
+            checklist.iconName = iconName
             delegate?.checklistDetailViewController(self, didFinishEditing: checklist)
         } else {
-            let checklist = Checklist(name: textField.text!)
+            let checklist = Checklist(name: textField.text!, iconName: iconName)
             delegate?.checklistDetailViewController(self, didFinishAdding: checklist)
         }
     }
-    
-    weak var delegate: CheckListDetailViewControllerDelegate?
-    var checklistToEdit: Checklist?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +52,7 @@ class CheckListDetailTableViewController: UITableViewController, UITextFieldDele
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,7 +60,12 @@ class CheckListDetailTableViewController: UITableViewController, UITextFieldDele
     }
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        return nil
+        
+        if indexPath.section == 1 {
+            return indexPath
+        } else {
+            return nil
+        }
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -76,7 +84,22 @@ class CheckListDetailTableViewController: UITableViewController, UITextFieldDele
             title = "Edit Checklist"
             textField.text = checklist.name
             doneBarButton.isEnabled = true
+            iconName = checklist.iconName
+            iconImageView.image = UIImage(named: iconName)
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "pickIcon" {
+            let controller = segue.destination as! IconPickerTableViewController
+            controller.delegate = self
+        }
+    }
+    
+    func iconPicker(_ picker: IconPickerTableViewController, didPick iconName: String) {
+        self.iconName = iconName
+        iconImageView.image = UIImage(named: iconName)
+        let _ = navigationController?.popViewController(animated: true)
     }
     
 }

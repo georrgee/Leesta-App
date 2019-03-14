@@ -22,8 +22,7 @@ class AllListsTableViewController: UITableViewController, CheckListDetailViewCon
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        print("Documents Folder is \(documentsDirectory())")
-//        print("Data File Path is \(dataFilePath())")
+        dataModel.printDocumentDirectoryAndFilePath()
     }
     
     override func viewDidAppear(_ animated: Bool) { // check at startup which checklist you need to show and then perform segue manually
@@ -68,6 +67,7 @@ class AllListsTableViewController: UITableViewController, CheckListDetailViewCon
         }
         
         cell.accessoryType = .detailDisclosureButton
+        cell.imageView!.image = UIImage(named: checklist.iconName)
         
         return cell
     }
@@ -133,27 +133,38 @@ class AllListsTableViewController: UITableViewController, CheckListDetailViewCon
     
     func checklistDetailViewController(_ controller: CheckListDetailTableViewController, didFinishAdding checklist: Checklist) {
         
-        let newRowIndex = dataModel.lists.count
+//        let newRowIndex = dataModel.lists.count
+//        dataModel.lists.append(checklist)
+//
+//        let indexPath = IndexPath(row: newRowIndex, section: 0)
+//        let indexPaths = [indexPath]
+//        tableView.insertRows(at: indexPaths, with: .automatic)
+//
+//        dismiss(animated: true, completion: nil)
+        
         dataModel.lists.append(checklist)
-        
-        let indexPath = IndexPath(row: newRowIndex, section: 0)
-        let indexPaths = [indexPath]
-        tableView.insertRows(at: indexPaths, with: .automatic)
-        
+        dataModel.sortChecklists()
+        tableView.reloadData()
         dismiss(animated: true, completion: nil)
+        
     }
     
     func checklistDetailViewController(_ controller: CheckListDetailTableViewController, didFinishEditing checklist: Checklist) {
         
-        if let index = dataModel.lists.index(of: checklist) {
-            
-            let indexPath = IndexPath(row: index, section: 0)
-            
-            if let cell = tableView.cellForRow(at: indexPath) {
-                cell.textLabel?.text = checklist.name
-            }
-        }
+//        if let index = dataModel.lists.index(of: checklist) {
+//
+//            let indexPath = IndexPath(row: index, section: 0)
+//
+//            if let cell = tableView.cellForRow(at: indexPath) {
+//                cell.textLabel?.text = checklist.name
+//            }
+//        }
+//        dismiss(animated: true, completion: nil)
+        
+        dataModel.sortChecklists()
+        tableView.reloadData()
         dismiss(animated: true, completion: nil)
+        
     }
     
     // method gets called whenever the nav controller will go to a new screen

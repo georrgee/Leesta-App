@@ -48,6 +48,18 @@ class DataModel {
         }
     }
     
+    // MARK: Sorting Checklists
+    
+    func printDocumentDirectoryAndFilePath(){
+        print("Documents Folder is \(documentsDirectory())")
+        print("Data File Path is \(dataFilePath())")
+    }
+    
+    func sortChecklists() {
+        lists.sort(by: { checklist1, checklist2 in
+            return checklist1.name.localizedStandardCompare(checklist2.name) == .orderedAscending })
+    }
+    
     // MARK: Document Saving
     func documentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -75,6 +87,7 @@ class DataModel {
             let unarchiver = NSKeyedUnarchiver(forReadingWith: data) // when it does find the List.plist file, load the entire array and its contents from file
             lists = unarchiver.decodeObject(forKey: "Checklists") as! [Checklist]
             unarchiver.finishDecoding()
+            sortChecklists()
         }
     }
 }

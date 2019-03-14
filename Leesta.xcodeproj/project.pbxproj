@@ -11,6 +11,7 @@
 		364CBD40222F53530011727B /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CBD3F222F53530011727B /* Checklist.swift */; };
 		367B4335223321D600A9CC83 /* CheckListDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367B4334223321D600A9CC83 /* CheckListDetailTableViewController.swift */; };
 		36D02D3F2238751300B6DFF3 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D02D3E2238751300B6DFF3 /* DataModel.swift */; };
+		36ED1AD32239BA1F000F505E /* IconPickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED1AD22239BA1F000F505E /* IconPickerTableViewController.swift */; };
 		36FE477D2229F9A40074582D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FE477C2229F9A40074582D /* AppDelegate.swift */; };
 		36FE47822229F9A40074582D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36FE47802229F9A40074582D /* Main.storyboard */; };
 		36FE47842229F9A40074582D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36FE47832229F9A40074582D /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		364CBD3F222F53530011727B /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 		367B4334223321D600A9CC83 /* CheckListDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListDetailTableViewController.swift; sourceTree = "<group>"; };
 		36D02D3E2238751300B6DFF3 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		36ED1AD22239BA1F000F505E /* IconPickerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPickerTableViewController.swift; sourceTree = "<group>"; };
 		36FE47792229F9A40074582D /* Leesta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Leesta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36FE477C2229F9A40074582D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36FE47812229F9A40074582D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				36FE4797222A1CC60074582D /* ItemDetailsTableViewController.swift */,
 				364CBD3D222F50000011727B /* AllListsTableViewController.swift */,
 				367B4334223321D600A9CC83 /* CheckListDetailTableViewController.swift */,
+				36ED1AD22239BA1F000F505E /* IconPickerTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			files = (
 				36FE477D2229F9A40074582D /* AppDelegate.swift in Sources */,
 				364CBD3E222F50000011727B /* AllListsTableViewController.swift in Sources */,
+				36ED1AD32239BA1F000F505E /* IconPickerTableViewController.swift in Sources */,
 				36FE4798222A1CC60074582D /* ItemDetailsTableViewController.swift in Sources */,
 				36FE4796222A05C90074582D /* List.swift in Sources */,
 				36FE47922229FAD90074582D /* ListsTableViewController.swift in Sources */,
